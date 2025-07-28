@@ -104,7 +104,7 @@ I have no idea why my solution gave WA though. At least I'm certain it's not ful
 
 **Statements**: Calculate $\gcd(a, b)$.
 
-**Constraints**: $1 \le a \le 10^12$, $1 \le b \le 10^200$.
+**Constraints**: $1 \le a \le 10^{12}$, $1 \le b \le 10^{200}$.
 
 **Tags**: maths, strings, implementation
 
