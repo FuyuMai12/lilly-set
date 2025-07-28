@@ -150,7 +150,7 @@ With that out of the way, we'd just need to find the smallest $k$ such that $\mi
 
 ## Problem I
 
-**Statements**: Calculate $C^n_k$. Answer is guaranteed to fit into `int64`.
+**Statements**: Calculate ${n \choose k}$. Answer is guaranteed to fit into `int64`.
 
 **Constraints**: $1 \le k \le n \le 500$.
 
@@ -158,4 +158,16 @@ With that out of the way, we'd just need to find the smallest $k$ such that $\mi
 
 **Solution/Idea**:
 
-You do know the combinatorics formula of $C^n_k = \frac{n!}{(n-k)!k!$. That'd be our bread and butter here. Though, clearly we can't calculate those numbers in whole. Instead, we'll list out all noteworthy primes - prime numbers not greater than the upper limit of $n$ and $k$ i.e. $500$ - and calculate each prime's exponent in each element using Legendre's formula. This task should be trivial.
+You do know the combinatorics formula of ${n \choose k} = \frac{n!}{(n-k)!k!}$. That'd be our bread and butter here. Though, clearly we can't calculate those numbers in whole. Instead, we'll list out all noteworthy primes - prime numbers not greater than the upper limit of $n$ and $k$ i.e. $500$ - and calculate each prime's exponent in each element using Legendre's formula. This task should be trivial.
+
+## Problem J
+
+**Statements**: There are $n$ mountains, the $i^{th}$ one having height $h_i$ and a constant $p_i$. To move from mountain $i$ to mountain $j$, one will need to pay a price equal $\max(p_i, h_j - h_i)$. Calculate the minimum total price to start at mountain $1$, go through each and every other mountain exactly once, then return to $1$.
+
+**Constraints**: $1 \le n \le 10^5$, $0 \le h_i, p_i \le 10^9$.
+
+**Tags**: ?
+
+**Solution/Idea**:
+
+No clear solution so far.
