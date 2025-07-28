@@ -147,3 +147,15 @@ $x$ will be considered invalid if at anytime during the iteration, an element ca
 We have a key lemma to solve this problem: given a number $k$ and a number $s$ so that $1 \le s \le \frac{k(k+1)}{2} - 1$, it is always possible to partition the set of natural numbers from $1$ to $k$ into two disjoint sets such that one has the sum of elements being $s$. Proof is left as an exercise for the reader.
 
 With that out of the way, we'd just need to find the smallest $k$ such that $\min(a, b) + \frac{k(k+1)}{2} \ge \max(a, b)$ (at least if tossing all numbers to the lower side, it should not be still lower) and $a + b + \frac{k(k+1)}{2}$ is an even number (so that the final numbers can actually be equal).
+
+## Problem I
+
+**Statements**: Calculate $C^n_k$. Answer is guaranteed to fit into `int64`.
+
+**Constraints**: $1 \le k \le n \le 500$.
+
+**Tags**: maths, number theory
+
+**Solution/Idea**:
+
+You do know the combinatorics formula of $C^n_k = \frac{n!}{(n-k)!k!$. That'd be our bread and butter here. Though, clearly we can't calculate those numbers in whole. Instead, we'll list out all noteworthy primes - prime numbers not greater than the upper limit of $n$ and $k$ i.e. $500$ - and calculate each prime's exponent in each element using Legendre's formula. This task should be trivial.
