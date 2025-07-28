@@ -150,7 +150,7 @@ With that out of the way, we'd just need to find the smallest $k$ such that $\mi
 
 ## Problem I
 
-**Statements**: Calculate ${n \choose k}$. Answer is guaranteed to fit into `int64`.
+**Statements**: Calculate the number of positive divisors of ${n \choose k}$. Answer is guaranteed to fit into `int64`.
 
 **Constraints**: $1 \le k \le n \le 500$.
 
