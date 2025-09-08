@@ -18,7 +18,7 @@ We can brute force all $(i, j)$ index pair to get all $a_i + a_j$ sums. Store th
 
 Now, iterate all index $p$. For each, we iterate index $k$, and now we are seeking $a_i + a_j = 3 a_p - a_k$. If the sum exists and the required index doesn't include $k$, then $p$ is a valid index for an average element.
 
-Both processes have $\mathcal{O}(n^2)$ complexity. The extra log is there due to the use of AVL/RBTree map to store the sum (could be reduce to high-coefficient $\mathcal{O}(1) if utilizing hash tables).
+Both processes have $\mathcal{O}(n^2)$ complexity. The extra log is there due to the use of AVL/RBTree map to store the sum (could be reduce to high-coefficient $\mathcal{O}(1)$ if utilizing hash tables).
 
 ## Problem B
 
