@@ -12,13 +12,13 @@
 
 **Solution/Idea**:
 
-An $\mathcal{O}(n^3)$ brute force solution is not possible. However, an optimized one of $\mathcal{O}(n^2 \log n)$ is possible, with some maths taken into account.
+An $\mathcal{O}(n^3)$ brute force solution is not possible. However, an optimized one of $\mathcal{O}(n^2 \log{n})$ is possible, with some maths taken into account.
 
 We can brute force all $(i, j)$ index pair to get all $a_i + a_j$ sums. Store the sums and the indices that form them. The latter part should be done in a way to keep only the index that is ***strictly*** required for that sum to exist. Namely: we'll only store at most two indices of the first pair that forms the sum in question, and gradually remove them if they don't appear in subsequent index pairs (if having any).
 
 Now, iterate all index $p$. For each, we iterate index $k$, and now we are seeking $a_i + a_j = 3 a_p - a_k$. If the sum exists and the required index doesn't include $k$, then $p$ is a valid index for an average element.
 
-Both processes have $\mathcal{O}(n^2)$ complexity. The extra log is there due to the use of AVL/RBTree map to store the sum (could be reduce to high-coefficient $\mathcal{O}(1)$ if utilizing hash tables).
+Both processes have $\mathcal{O}(n^2)$ complexity. The extra log is there due to the use of AVL/RBTree map to store the sum (could be reduced to high-coefficient $\mathcal{O}(1)$ if utilizing hash tables).
 
 ## Problem B
 
@@ -34,7 +34,7 @@ It is shown that we can easily list all prime divisors that appear in any elemen
 
 Now, perform a sieve in range $[1, m]$ using just the primes found above. The elements not being punched out will be the ones listed in the answer.
 
-Time complexity: $\mathcal{O}(n \log \log a_i)$.
+Time complexity: $\mathcal{O}(n \log{\log{a_i}})$.
 
 ## Problem C
 
@@ -86,7 +86,9 @@ It's not solved yet. No idea either.
 
 The multitest requirements make us prefer to just outright list all near-palindromes in range $[1, 10^6]$, then calculate how many near-palindromes in range $[1, x]$ for all $x$ - we'll call this $f(x)$.
 
-Then, for each test, calculate $f(B) - f(A-1)$.
+Then, for each test case, calculate $f(B) - f(A-1)$.
+
+Time complexity: $\mathcal{O}(10^6)$ for preparation, $\mathcal{O}(1)$ for each test case.
 
 ## Problem G
 
@@ -110,7 +112,7 @@ Be extra careful about multiple pitfalls. One of the most obnoxious ones being o
 
 **Statements**: Given a string $s$, partition it into the minimal amount of substrings $n$ ($s_1 + s_2 + \ldots + s_n = s$) such that each $s_i$ can be permuted to be a palindrome.
 
-**Constraints**: $1 \le |s| \le 10^5$.
+**Constraints**: $1 \le \lvert s \rvert \le 10^5$.
 
 **Tags**: strings, dynamic programming, bitmasks
 
@@ -122,7 +124,7 @@ Consider $dp_i$ as the minimal number of substrings to partition the prefix of $
 
 Traverse through all prefixes of $s$ and consider their masks. With each mask, check if it could be XOR'd with any known prefix to become a power of two - iterate all possible power of two and check, then update the dynamic programming value accordingly if found any. For easy lookup, the prefix mask values can be stored in an AVL/RBTree map.
 
-Time complexity: $\mathcal{O}(26 |s| \log |s|)$
+Time complexity: $\mathcal{O}(26 \lvert s \rvert \log{\lvert s \rvert})$
 
 ## Problem I
 
@@ -137,6 +139,8 @@ Time complexity: $\mathcal{O}(26 |s| \log |s|)$
 If $f(n) = 1$, the only possible $X$ for a correct answer would be $1$.
 
 Otherwise, the problem can be bruteforced with $f(n)$ from $60$ down to $2$. Be extra careful when taking roots of numbers to find corresponding $n$ - it is strongly advised to use binary search other than real number manipulation to maintain accuracy.
+
+Time complexity: $\mathcal{O}(\sqrt[4]{X})$.
 
 ## Problem J
 
