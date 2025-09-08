@@ -92,7 +92,7 @@ Then, for each test, calculate $f(B) - f(A-1)$.
 
 **Statements**: Given a chessboard of size $n \times m$ and $k$ obstacles in $k$ distinct cells, with a rook at cell $(1, 1)$. This rook can move straight horizontally or vertically at any length, but cannot touch or surpass an obstacle if it's in the way. Count the number of distinct cells it could reach in no more than $2$ moves.
 
-**Constraints**: $1 \le n, m \le 2 \cdot 10^5$, $0 \le k \le 2 cdot 10^5$.
+**Constraints**: $1 \le n, m \le 2 \cdot 10^5$, $0 \le k \le 2 \cdot 10^5$.
 
 **Tags**: ad-hoc, data structures, maths
 
