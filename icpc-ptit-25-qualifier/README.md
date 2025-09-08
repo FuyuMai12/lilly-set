@@ -12,7 +12,7 @@
 
 **Solution/Idea**:
 
-An $\mathcal{O}(n^3)$ brute force solution is possible. However, an optimized one of $\mathcal{O}(n^2 \log n)$ is possible, with some maths taken into account.
+An $\mathcal{O}(n^3)$ brute force solution is not possible. However, an optimized one of $\mathcal{O}(n^2 \log n)$ is possible, with some maths taken into account.
 
 We can brute force all $(i, j)$ index pair to get all $a_i + a_j$ sums. Store the sums and the indices that form them. The latter part should be done in a way to keep only the index that is ***strictly*** required for that sum to exist. Namely: we'll only store at most two indices of the first pair that forms the sum in question, and gradually remove them if they don't appear in subsequent index pairs (if having any).
 
